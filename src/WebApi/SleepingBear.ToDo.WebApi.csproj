@@ -19,11 +19,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Database\SleepingBear.ToDo.Database.csproj" />
+        <ProjectReference Include="..\Database\SleepingBear.ToDo.Database.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Common\" />
+        <Folder Include="Common\"/>
     </ItemGroup>
 
 </Project>
