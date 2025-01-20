@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\WebApi\Sleepingbear.ToDo.WebApi.csproj"/>
+        <ProjectReference Include="..\WebApi\SleepingBear.ToDo.WebApi.csproj"/>
     </ItemGroup>
 
 </Project>
