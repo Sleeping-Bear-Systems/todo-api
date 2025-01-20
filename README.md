@@ -49,6 +49,7 @@ Use the `DatabaseCli.exe` tool to create or drop ToDo WebApi databases.
 ```powershell
 dotnet run --project ./src/DatabaseCli/ -- database create -c "$env:SBS_TEST_SERVER_POSTGRES;Database=<DATABASE>" -f
 ```
+
 The `-f` option will drop the database if it already exists.
 
 ### Drop a Database

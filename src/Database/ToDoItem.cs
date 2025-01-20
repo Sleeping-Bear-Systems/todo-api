@@ -1,23 +1,28 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+// ReSharper disable PropertyCanBeMadeInitOnly.Global
+
 namespace SleepingBear.ToDo.Database;
 
 /// <summary>
-/// To-Do item model.
+///     To-Do item model.
 /// </summary>
 [Table("todo-items")]
 public sealed class ToDoItem
 {
     /// <summary>
-    /// ID.
+    ///     ID.
     /// </summary>
-    [Key, Column("id")]
+    [Key]
+    [Column("id")]
     public Guid Id { get; set; }
 
     /// <summary>
-    /// Name.
+    ///     Name.
     /// </summary>
-    [Required, Column("name"), MaxLength(128)]
+    [Required]
+    [Column("name")]
+    [MaxLength(128)]
     public string Name { get; set; } = string.Empty;
 }

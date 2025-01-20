@@ -14,9 +14,9 @@ public sealed class ToDoDbContext : DbContext
         : base(options)
     {
     }
-    
+
     /// <summary>
-    ///    To-Do items.
+    ///     To-Do items.
     /// </summary>
     public DbSet<ToDoItem> ToDos { get; set; }
 
