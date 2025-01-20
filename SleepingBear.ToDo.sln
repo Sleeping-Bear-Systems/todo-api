@@ -9,6 +9,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SleepingBear.ToDo.WebApi.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SleepingBear.ToDo.WebApi", "src\WebApi\SleepingBear.ToDo.WebApi.csproj", "{75CA62B2-2D8A-4341-AC05-56777C662714}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{CD1AE6D8-9B25-4B6C-B987-49A6636F2A6B}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.env = .env
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		global.json = global.json
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
