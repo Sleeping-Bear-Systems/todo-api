@@ -28,4 +28,3 @@ app.UseHttpsRedirection();
 app.MapPing();
 
 app.Run();
-

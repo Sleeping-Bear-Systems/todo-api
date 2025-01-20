@@ -6,8 +6,9 @@ namespace SleepingBear.ToDo.WebApi.Common;
 internal static class CommonExtensions
 {
     /// <summary>
-    /// Register the Common services.
+    ///     Register the Common services.
     /// </summary>
+    // ReSharper disable once UnusedMethodReturnValue.Global
     public static IServiceCollection AddCommon(
         this IServiceCollection services,
         TimeProvider timeProvider,
