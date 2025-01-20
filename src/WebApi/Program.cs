@@ -1,9 +1,13 @@
+using SleepingBear.Functional.Monads;
+using SleepingBear.Functional.Validation;
 using SleepingBear.ToDo.WebApi.Common;
 using SleepingBear.ToDo.WebApi.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = string.Empty;
+var connectionString = builder.Configuration["ConnectionStrings:Postgres"]
+    .AsToken()
+    .MatchOrThrow(() => new InvalidOperationException("Connection string not found."));
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -24,3 +28,4 @@ app.UseHttpsRedirection();
 app.MapPing();
 
 app.Run();
+
