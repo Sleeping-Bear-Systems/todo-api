@@ -1,0 +1,7 @@
+@SleepingBear.ToDo.WebApi_HostAddress = http://localhost:5156
+
+### Ping
+GET {{['SleepingBear.ToDo.WebApi_HostAddress']}}/api/ping
+Accept: application/json
+
+###

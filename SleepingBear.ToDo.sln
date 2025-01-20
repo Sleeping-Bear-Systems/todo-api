@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D6B42BC1-C51
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SleepingBear.ToDo.WebApi.Tests", "src\WebApi.Tests\SleepingBear.ToDo.WebApi.Tests.csproj", "{2DBCC725-FFFF-4082-8B83-48E642D07F01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sleepingbear.ToDo.WebApi", "src\WebApi\Sleepingbear.ToDo.WebApi.csproj", "{75CA62B2-2D8A-4341-AC05-56777C662714}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SleepingBear.ToDo.WebApi", "src\WebApi\SleepingBear.ToDo.WebApi.csproj", "{75CA62B2-2D8A-4341-AC05-56777C662714}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
