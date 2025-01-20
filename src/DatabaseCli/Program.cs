@@ -12,14 +12,14 @@ rootCommand.Add(databaseCommand);
 
 // options
 var connectionStringOption =
-    new Option<string>(["-c", "--connection-string"], "The connection string to the database.");
+    new Option<string>(["-c", "--connection-string"], description: "The connection string to the database.");
 
-var forceOption = new Option<bool>(["-f", "--force"], "Force the creation of the database.");
+var forceOption = new Option<bool>(["-f", "--force"], description: "Force the creation of the database.");
 
-var datasetOption = new Option<string>(["-d", "--dataset"], "The dataset to use.");
+var datasetOption = new Option<string>(["-d", "--dataset"], description: "The dataset to use.");
 
 // create database command
-var createDatabaseCommand = new Command("create", "Create a new database.")
+var createDatabaseCommand = new Command(name: "create", description: "Create a new database.")
 {
     connectionStringOption,
     forceOption,
@@ -56,7 +56,8 @@ createDatabaseCommand.SetHandler(async (connectionString, force, dataset) =>
 databaseCommand.Add(createDatabaseCommand);
 
 // drop database command
-var dropDatabaseCommand = new Command("drop", "Drop an existing database.") { connectionStringOption };
+var dropDatabaseCommand = new Command(name: "drop", description: "Drop an existing database.")
+    { connectionStringOption };
 dropDatabaseCommand.SetHandler(async connectionString =>
     {
         var dbContext = ToDoDbContext.FromConnectionString(connectionString);

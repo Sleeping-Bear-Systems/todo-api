@@ -7,7 +7,7 @@ internal static class GetToDos
 {
     public static void MapGetToDosEndpoint(this IEndpointRouteBuilder builder)
     {
-        builder.MapGet("/api/todos", async (ToDoDbContext dbContext) =>
+        builder.MapGet(pattern: "/api/todos", async (ToDoDbContext dbContext) =>
         {
             var todos = await dbContext.ToDos
                 .Select(item => new { item.Id, item.Name })
