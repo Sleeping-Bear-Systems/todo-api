@@ -20,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{CD1AE6D8-9
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SleepingBear.ToDo.DatabaseCli", "src\DatabaseCli\SleepingBear.ToDo.DatabaseCli.csproj", "{0C60EE2C-0EC9-4F91-B066-F078AC7FE637}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SleepingBear.ToDo.Database", "src\Database\SleepingBear.ToDo.Database.csproj", "{F49549B7-6D38-4F1C-9764-B361CF54D1F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,9 +41,19 @@ Global
 		{75CA62B2-2D8A-4341-AC05-56777C662714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75CA62B2-2D8A-4341-AC05-56777C662714}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75CA62B2-2D8A-4341-AC05-56777C662714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C60EE2C-0EC9-4F91-B066-F078AC7FE637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C60EE2C-0EC9-4F91-B066-F078AC7FE637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C60EE2C-0EC9-4F91-B066-F078AC7FE637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C60EE2C-0EC9-4F91-B066-F078AC7FE637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49549B7-6D38-4F1C-9764-B361CF54D1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49549B7-6D38-4F1C-9764-B361CF54D1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49549B7-6D38-4F1C-9764-B361CF54D1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49549B7-6D38-4F1C-9764-B361CF54D1F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2DBCC725-FFFF-4082-8B83-48E642D07F01} = {D6B42BC1-C515-441B-B997-FD2FF9726A5D}
 		{75CA62B2-2D8A-4341-AC05-56777C662714} = {D6B42BC1-C515-441B-B997-FD2FF9726A5D}
+		{0C60EE2C-0EC9-4F91-B066-F078AC7FE637} = {D6B42BC1-C515-441B-B997-FD2FF9726A5D}
+		{F49549B7-6D38-4F1C-9764-B361CF54D1F8} = {D6B42BC1-C515-441B-B997-FD2FF9726A5D}
 	EndGlobalSection
 EndGlobal

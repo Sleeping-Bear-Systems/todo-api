@@ -1,8 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace SleepingBear.ToDo.WebApi.Common.Database;
+namespace SleepingBear.ToDo.Database;
 
-internal sealed class ToDoDbContext : DbContext
+/// <summary>
+/// ToDo database context.
+/// </summary>
+public sealed class ToDoDbContext : DbContext
 {
     /// <summary>
     ///     Constructor.
