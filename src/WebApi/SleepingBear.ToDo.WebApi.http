@@ -1,6 +1,7 @@
 @SleepingBear.ToDo.WebApi_HostAddress = http://localhost:5156
 
-GET {{SleepingBear.ToDo.WebApi_HostAddress}}/weatherforecast/
+### Ping
+GET {{['SleepingBear.ToDo.WebApi_HostAddress']}}/api/ping
 Accept: application/json
 
 ###
