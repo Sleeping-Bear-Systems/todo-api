@@ -8,6 +8,11 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1"/>
     </ItemGroup>
 
+    <!-- Transitive dependencies: dotnet-outdated -t -td 5 -->
+    <ItemGroup>
+        <PackageReference Include="Microsoft.OpenApi" Version="1.6.23"/>
+    </ItemGroup>
+
     <ItemGroup>
         <InternalsVisibleTo Include="$(AssemblyName).Tests"/>
     </ItemGroup>

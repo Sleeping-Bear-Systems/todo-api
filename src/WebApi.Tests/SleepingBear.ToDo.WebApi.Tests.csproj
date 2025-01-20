@@ -18,6 +18,12 @@
         <PackageReference Include="NUnit3TestAdapter" Version="4.6.0"/>
     </ItemGroup>
 
+    <!-- Transitive dependencies: dotnet-outdated -t -td 5 -->
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+        <PackageReference Include="System.Reflection.Metadata" Version="9.0.1"/>
+    </ItemGroup>
+
     <ItemGroup>
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
