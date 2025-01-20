@@ -1,4 +1,5 @@
 ﻿using System.CommandLine;
+using SleepingBear.Functional.Common;
 using SleepingBear.ToDo.Database;
 
 // root command
@@ -10,28 +11,48 @@ var databaseCommand = new Command("database");
 rootCommand.Add(databaseCommand);
 
 // options
-var connectionStringOption = new Option<string>("--connection-string", "The connection string to the database.");
-connectionStringOption.AddAlias("-c");
-var forceOption = new Option<bool>("--force", "Force the creation of the database.");
-connectionStringOption.AddAlias("-f");
+var connectionStringOption =
+    new Option<string>(["-c", "--connection-string"], "The connection string to the database.");
+
+var forceOption = new Option<bool>(["-f", "--force"], "Force the creation of the database.");
+
+var datasetOption = new Option<string>(["-d", "--dataset"], "The dataset to use.");
 
 // create database command
 var createDatabaseCommand = new Command("create", "Create a new database.")
 {
     connectionStringOption,
-    forceOption
+    forceOption,
+    datasetOption
 };
-createDatabaseCommand.SetHandler(async (connectionString, force) =>
+createDatabaseCommand.SetHandler(async (connectionString, force, dataset) =>
     {
         var dbContext = ToDoDbContext.FromConnectionString(connectionString);
         // ReSharper disable once ConvertToUsingDeclaration
         await using (var _ = dbContext.ConfigureAwait(true))
         {
+            if (force)
+            {
+                Console.WriteLine("Dropping database...");
+                await dbContext.Database.EnsureDeletedAsync().ConfigureAwait(true);
+            }
+
+            Console.WriteLine("Creating database...");
             await dbContext.Database.EnsureCreatedAsync().ConfigureAwait(true);
+
+            var validDataset = dataset.IfNull().Trim().ToUpperInvariant();
+            switch (validDataset)
+            {
+                case "TEST":
+                    Console.WriteLine("Applying test dataset...");
+                    await TestDataSet.Apply(dbContext).ConfigureAwait(true);
+                    break;
+            }
         }
     },
     connectionStringOption,
-    forceOption);
+    forceOption,
+    datasetOption);
 databaseCommand.Add(createDatabaseCommand);
 
 // drop database command

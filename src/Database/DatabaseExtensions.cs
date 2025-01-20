@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace SleepingBear.ToDo.Database;
@@ -12,10 +11,8 @@ public static class DatabaseExtensions
     /// <summary>
     ///     Registers the EntityFramework database context.
     /// </summary>
-    [SuppressMessage("ReSharper", "UnusedMethodReturnValue.Global")]
-    public static IServiceCollection AddDatabase(this IServiceCollection services, string connectionString)
+    public static void AddDatabase(this IServiceCollection services, string connectionString)
     {
         services.AddDbContext<ToDoDbContext>(options => options.UseNpgsql(connectionString));
-        return services;
     }
 }

@@ -4,4 +4,8 @@
 GET {{['SleepingBear.ToDo.WebApi_HostAddress']}}/api/ping
 Accept: application/json
 
+### Get ToDos
+GET {{['SleepingBear.ToDo.WebApi_HostAddress']}}/api/todos
+Accept: application/json
+
 ###
