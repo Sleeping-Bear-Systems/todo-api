@@ -40,6 +40,23 @@ to use current environment variables.
 ./tools/Start-Application.ps1 -UseCurrentEnvironment
 ```
 
+## Managing Databases
+
+Use the `DatabaseCli.exe` tool to create or drop ToDo WebApi databases.
+
+### Create Database
+
+```powershell
+dotnet run --project ./src/DatabaseCli/ -- database create -c "$env:SBS_TEST_SERVER_POSTGRES;Database=<DATABASE>" -f
+```
+The `-f` option will drop the database if it already exists.
+
+### Drop a Database
+
+```powershell
+dotnet run --project ./src/DatabaseCli/ -- database drop -c "$env:SBS_TEST_SERVER_POSTGRES;Database=<DATABASE>"
+```
+
 ### References
 
 [1Password inject](https://developer.1password.com/docs/cli/reference/commands/inject/)
