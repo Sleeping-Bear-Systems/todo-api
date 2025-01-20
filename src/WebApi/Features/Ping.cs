@@ -8,11 +8,8 @@ internal static class Ping
     /// <summary>
     ///     Maps the "Ping" endpoint.
     /// </summary>
-    // ReSharper disable once UnusedMethodReturnValue.Global
-    public static IEndpointRouteBuilder MapPingEndpoint(this IEndpointRouteBuilder endpoints)
+    public static void MapPingEndpoint(this IEndpointRouteBuilder builder)
     {
-        endpoints.MapGet("/api/ping", () => Results.Ok());
-
-        return endpoints;
+        builder.MapGet("/api/ping", () => Results.Ok());
     }
 }

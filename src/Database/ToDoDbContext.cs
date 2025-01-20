@@ -14,6 +14,11 @@ public sealed class ToDoDbContext : DbContext
         : base(options)
     {
     }
+    
+    /// <summary>
+    ///    To-Do items.
+    /// </summary>
+    public DbSet<ToDoItem> ToDos { get; set; }
 
     /// <summary>
     ///     Factory method for creating a <see cref="ToDoDbContext" /> from a connection string.
