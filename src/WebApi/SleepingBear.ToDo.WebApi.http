@@ -4,8 +4,16 @@
 GET {{['SleepingBear.ToDo.WebApi_HostAddress']}}/api/ping
 Accept: application/json
 
-### Get ToDos
+### Get To-Do Items
 GET {{['SleepingBear.ToDo.WebApi_HostAddress']}}/api/todo-items
+Accept: application/json
+
+### Get To-Do Item (found)
+GET {{['SleepingBear.ToDo.WebApi_HostAddress']}}/api/todo-items/2D98B786-D490-4545-872C-64C787D74D11
+Accept: application/json
+
+### Get To-Do Item (not-found)
+GET {{['SleepingBear.ToDo.WebApi_HostAddress']}}/api/todo-items/00000000-0000-0000-0000-000000000000
 Accept: application/json
 
 ###
