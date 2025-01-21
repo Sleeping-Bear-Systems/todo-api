@@ -45,7 +45,7 @@ createDatabaseCommand.SetHandler(async (connectionString, force, dataset) =>
             {
                 case "TEST":
                     Console.WriteLine("Applying test dataset...");
-                    await TestDataSet.Apply(dbContext).ConfigureAwait(true);
+                    await TestDataSet.ApplyAsync(dbContext).ConfigureAwait(true);
                     break;
             }
         }

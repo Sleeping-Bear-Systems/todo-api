@@ -9,6 +9,8 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.1"/>
+        <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" Version="9.1.0"/>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0"/>
         <PackageReference Include="NUnit" Version="4.3.2"/>
         <PackageReference Include="NUnit.Analyzers" Version="4.6.0">
@@ -21,6 +23,7 @@
     <!-- Transitive dependencies: dotnet-outdated -t -td 5 -->
     <ItemGroup>
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+        <PackageReference Include="SleepingBear.TemporaryDatabase.Postgres" Version="1.0.0-alpha.4"/>
         <PackageReference Include="System.Reflection.Metadata" Version="9.0.1"/>
     </ItemGroup>
 
