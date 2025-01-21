@@ -27,7 +27,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapPingEndpoint();
-app.MapGetTodoItemsEndpoint();
+app.MapGetToDoItemsEndpoint();
 app.MapGetToDoItemEndpoint();
 
 app.Run();
