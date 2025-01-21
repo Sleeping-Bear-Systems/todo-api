@@ -13,7 +13,7 @@ public static class TestDataSet
     {
         ArgumentNullException.ThrowIfNull(dbContext);
 
-        await dbContext.ToDos
+        await dbContext.ToDoItems
             .AddRangeAsync(
                 new ToDoItem { Id = new Guid("2D98B786-D490-4545-872C-64C787D74D11"), Name = "Item #1" },
                 new ToDoItem { Id = new Guid("658F298B-2C47-41F9-A352-4E1C465FB1D6"), Name = "Item #2" },
