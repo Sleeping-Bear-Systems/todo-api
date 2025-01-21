@@ -28,5 +28,6 @@ app.UseHttpsRedirection();
 
 app.MapPingEndpoint();
 app.MapGetTodoItemsEndpoint();
+app.MapGetToDoItemEndpoint();
 
 app.Run();
