@@ -3,13 +3,13 @@ using SleepingBear.ToDo.Database;
 
 namespace SleepingBear.ToDo.WebApi.Features;
 
-internal static class GetToDos
+internal static class GetToDoItems
 {
-    public static void MapGetToDosEndpoint(this IEndpointRouteBuilder builder)
+    public static void MapGetTodoItemsEndpoint(this IEndpointRouteBuilder builder)
     {
-        builder.MapGet(pattern: "/api/todos", async (ToDoDbContext dbContext) =>
+        builder.MapGet(pattern: "/api/todo-items", async (ToDoDbContext dbContext) =>
         {
-            var todos = await dbContext.ToDos
+            var todos = await dbContext.ToDoItems
                 .Select(item => new { item.Id, item.Name })
                 .ToListAsync()
                 .ConfigureAwait(false);

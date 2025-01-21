@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Diagnostics.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 
 namespace SleepingBear.ToDo.Database;
 
 /// <summary>
 ///     ToDo database context.
 /// </summary>
+[SuppressMessage(category: "ReSharper", checkId: "NullableWarningSuppressionIsUsed")]
 public sealed class ToDoDbContext : DbContext
 {
     /// <summary>
@@ -18,7 +20,7 @@ public sealed class ToDoDbContext : DbContext
     /// <summary>
     ///     To-Do items.
     /// </summary>
-    public DbSet<ToDoItem> ToDos { get; set; }
+    public DbSet<ToDoItem> ToDoItems { get; set; } = null!;
 
     /// <summary>
     ///     Factory method for creating a <see cref="ToDoDbContext" /> from a connection string.
