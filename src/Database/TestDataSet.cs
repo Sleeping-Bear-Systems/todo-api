@@ -9,7 +9,7 @@ public static class TestDataSet
     ///     Seeds the database with test data.
     /// </summary>
     /// <param name="dbContext"></param>
-    public static async Task Apply(ToDoDbContext dbContext)
+    public static async Task ApplyAsync(ToDoDbContext dbContext)
     {
         ArgumentNullException.ThrowIfNull(dbContext);
 
