@@ -5,7 +5,7 @@ namespace SleepingBear.ToDo.WebApi.Features;
 
 internal static class GetToDoItems
 {
-    public static void MapGetTodoItemsEndpoint(this IEndpointRouteBuilder builder)
+    public static void MapGetToDoItemsEndpoint(this IEndpointRouteBuilder builder)
     {
         builder.MapGet(pattern: "/api/todo-items", async (ToDoDbContext dbContext) =>
         {
